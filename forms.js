@@ -33,6 +33,20 @@ edad.addEventListener('keypress', (e)=>{
     }
 })
 
+celular.addEventListener('keypress', (e)=>{
+    var caracter = e.keyCode || e.charCode;
+    if((caracter < 48 || caracter > 57 ) || e.target.value.length > 14){
+        e.preventDefault();
+    }
+})
+
+nombre.addEventListener('keypress', (e)=>{
+    var caracter = e.keyCode;
+    if(caracter == 32){
+        e.preventDefault();
+    }
+})
+
 function validarCampos(){
     var valido = true;
 
